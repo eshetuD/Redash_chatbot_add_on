@@ -109,11 +109,10 @@ export default function ChatBox() {
     <>
       {open?
       <div className='chatcontainer'>
+        <div className='headbox'>
+          Chat with Visor        
+        </div>
         <div>
-            <div className='headbox'>
-              <p>query, visualize with AI</p>            
-            </div>
-
             <div className='chatbox'>
               {chatHistory.map((chat, index) => (
                 <div key={index} className="chatcontain">
@@ -180,7 +179,7 @@ export default function ChatBox() {
                   className="input"    
                   type="text"
                   value={input}
-                  placeholder="Type your message…"
+                  placeholder="Enter your message here"
                   onChange={(e) => setInput(e.target.value)}
                   onKeyDown={(e) => handler(e)}
               />
